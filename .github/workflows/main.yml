@@ -13,5 +13,5 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.PORT }}
-          source: "index.html"
+          source: "*"
           target: /var/www/html/
