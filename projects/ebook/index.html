@@ -1,0 +1,16 @@
+<a href="../../index.html">return home</a>
+
+<input type="file" name="upload" id="pdfUpload" accept="application/pdf" />
+<iframe id="pdfPreview" title="book" width="600" height="500"></iframe>
+
+<script>
+    document.getElementById('pdfUpload').addEventListener('change', function (event) {
+        const file = event.target.files[0];
+        if (file.type === "application/pdf") {
+            const fileURL = URL.createObjectURL(file);
+            document.getElementById('pdfPreview').src = fileURL;
+        } else {
+            alert("Please upload a valid PDF file.");
+        }
+    });
+</script>
